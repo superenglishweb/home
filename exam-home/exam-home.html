@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Exam Home</title>
+    <link rel="stylesheet" href="exam-home.css">
+</head>
+<body>
+    <div class="top-section">
+        <a href="../" class="turn-back-link">
+            <img src="../assets/images/turn-back.svg">
+        </a>
+        <h1>Đề thi thử tuyển sinh vào 10</h1>
+    </div>
+
+    <div class="mid-section">
+        <div class="rules-container">
+            <h1>Competition Rules</h1>
+            <p class="introduction">
+                Please read the competition rules carefully before participating to ensure your rights and comply with the regulations.
+            </p>
+            <div class="rule">
+                <h2>1. Eligibility</h2>
+                <p>- All students who need to take the entrance exam for grade 10 are eligible to participate.</p>
+            </div>
+            <div class="rule">
+                <h2>2. Time: No more than 360 minutes</h2>
+                <div class="time-input-group">
+                    <label for="timeInput">Time: </label>
+                    <input type="text" class="time-input" value="120">
+                    <span> minutes (can be adjusted)</span>
+                </div>
+            </div>
+            <div class="rule">
+                <h2>3. Scoring Method</h2>
+                <p>- Each correct answer is awarded 0.25 points</p>
+            </div>
+            <a class="submit-btn" onclick="submitData()">
+                I understand and agree</a>
+        </div>
+
+        <div class="history-container">
+            <h1>History exams</h1>
+            <div class="storage-exams"></div>
+        </div>
+    </div>
+
+    <script src="exam-home.js"></script>
+</body>
+</html>

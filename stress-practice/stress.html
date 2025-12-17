@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Practice</title>
+    <link rel="stylesheet" href="stress.css">
+</head>
+<body>
+    
+    <div class="guide-overlay hide">
+        <div class="guide-container">
+            <h1 class="guide-title">Guide</h1>
+            <div class="guide-content">
+                <p>This is a stress test, and you will earn one point for each correct answer.</p>
+            </div>
+            <div class="i-see" onclick="hideGuide()">
+                I see!
+            </div>
+        </div>
+    </div>
+
+    <div class="submit-overlay hide">
+        <div class="submit-container">
+            <div class="submit-content">
+                Do you want to submit?
+            </div>
+            <div class="allow-submit" onclick="submitExam()">
+                Allow
+            </div>
+            <div class="cancel-submit" onclick="hideSubmit()">
+                Cancel
+            </div>
+        </div>
+    </div>
+    
+        
+    <div class="top-section">
+        <a href="../" class="turn-back-btn">x</a>
+        <div class="score"></div>
+        <div class="double-btn">
+            <div class="guide-btn" onclick="showGuide()">Guide</div>
+            <div class="submit-btn" onclick="showSubmit();">Submit</div>
+        </div>
+    </div>
+    <div class="exam">
+        <h1>Stress Practice</h1>
+        <div class="mc-exercise">
+            <div class="title-exercise">
+                Circle the letter A, B, C or D to indicate the word that differs from the other three in the position of primary stress in the following questions.
+            </div>
+            <div class="mc-questions"></div>
+        </div>
+    </div>
+
+    <script type="module" src="stress.js"></script>
+</body>
+</html>

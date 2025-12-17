@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    border: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(230, 230, 230);
+    color: #333;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 30px 50px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(0, 180, 120);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.turn-back-btn {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.turn-back-btn:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.turn-back-btn:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.time {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.submit-btn {
+    color: rgb(0, 180, 120);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.submit-overlay, .turn-back-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.submit-container, .turn-back-container {
+    background-color: white;
+    padding: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submit-content, .turn-back-content {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.allow-submit, .allow-turn-back {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.allow-submit:hover, .allow-turn-back:hover {
+    background-color: #46da4d;
+}
+
+.cancel-submit, .cancel-turn-back {
+    background-color: #ce541b;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.cancel-submit:hover, .cancel-turn-back:hover {
+    background-color: rgb(255, 180, 180);
+}
+
+.time-run-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.time-run-out.hide {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.time-run-out .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.notificate {
+    background-color: white;
+    border: 2px solid black;
+    width: inherit;
+    margin: 0 10%;
+    height: 150px;;
+    color: rgb(0, 180, 120);
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 150px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.hide {
+    display: none;
+}
+
+.part-title {
+    margin-top: 120px;
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(99, 47, 112);
+    margin-left: 20px;
+}
+
+.name-exam, .time-exam {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.exam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exam-part {
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.exam-part h1 {
+    font-size: 25px;
+    color: rgb(25, 100, 130);
+    margin-bottom: 10px;
+}
+
+audio {
+    margin-bottom: 20px;
+}
+
+mc-questions {
+    display: flex;
+    flex-direction: column;
+}
+
+mc-question {
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(180, 100, 130);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.mc-answer {
+    min-width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.mc-choice-id {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.mc-choice-id:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.mc-answer-content {
+    font-size: 20px;
+    font-weight: 500;
+    width: 70%;
+    padding: 10px;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.mc-choice-id.chose {
+    background-color: rgb(196, 237, 255);
+}
+
+.explain {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.heading-question1, .heading-question2 {
+    font-size: 25px;
+    text-indent: 40px;
+}
+
+.highlight {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.purple {
+    color: rgb(99, 47, 112)
+}
+
+.mc-choice-id.correct {
+    background-color: lightgreen;
+}
+
+.mc-choice-id.incorrect {
+    background-color: lightcoral;
+}
+
+.result-icon {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.result-icon.correct {
+    color: rgb(0, 180, 120);
+}
+
+.result-icon.incorrect {
+    color: rgb(206, 61, 56);
+}
+
+.result-icon.not-selected {
+    color: rgb(255, 153, 0);
+}

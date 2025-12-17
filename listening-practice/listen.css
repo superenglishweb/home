@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.guide-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.guide-container {
+    background-color: white;
+    width: 40%;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.guide-title {
+    color: rgb(0, 180, 120);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.guide-content {
+    padding: 0 40px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.i-see {
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.i-see:hover {
+    background-color: #45a049;
+}
+
+
+.submit-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.submit-container {
+    background-color: white;
+    padding: 20px 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.submit-content {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.allow-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.allow-submit:hover {
+    background-color: #46da4d;
+}
+
+.cancel-submit {
+    background-color: #ce541b;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.cancel-submit:hover {
+    background-color: rgb(255, 180, 180);
+}
+
+
+.hide {
+    display: none;
+}
+
+.top-section {
+    background-color: rgb(0, 180, 120);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    min-height: 80px;
+    z-index: 10;
+}
+.turn-back-btn {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.score {
+    font-size: 18px;
+    color: white;
+}
+.double-btn {
+    display: flex;
+    gap: 10px;
+}
+.guide-btn, .submit-btn {
+    background-color: #ffffff;
+    color: rgb(0, 180, 120);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.guide-btn:hover, .submit-btn:hover {
+    background-color: rgba(255, 200, 200);
+}
+
+h1 {
+    color: rgb(0, 180, 120);
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 30px;
+    z-index: 10;
+}
+
+.exam {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 15%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+    margin-bottom: 20px;
+}
+
+exam-sound {
+    color: #2563eb;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.title-exercise {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+.mc-exercise, .fill-black-exercise {
+    margin-bottom: 40px;
+}
+.mc-question {
+    background-color: #e5e7eb;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.mc-question-id {
+    font-weight: 600;
+    font-size: 25px;
+}
+.mc-question-name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mc-answer-container {
+    display: flex;
+    width: 70%;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.mc-choice-id {
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(100, 100, 100);
+    padding: 10px 10px;
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.chose {
+    background-color: lightblue;
+}
+
+.mc-choice-content {
+    font-size: 18px;
+}
+.fb-questions .fb-question {
+    background-color: #e5e7eb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.fb-question input {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    width: 50%;
+    transition: border-color 0.3s;
+}
+.fb-question input:focus {
+    border-color: #3b82f6;
+}
+.fb-question .fb-question-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.fb-question-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mc-choice-id.correct {
+    background-color: lightgreen;
+}
+
+.mc-choice-id.incorrect {
+    background-color: lightcoral;
+}
+
+.result-icon {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.result-icon.correct {
+    color: rgb(0, 180, 120);
+}
+
+.result-icon.incorrect {
+    color: rgb(206, 61, 56);
+}
+
+.result-icon.not-selected {
+    color: rgb(255, 174, 0);
+}
+
+.explanation {
+    color: rgb(100, 100, 100);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 20px;
+}

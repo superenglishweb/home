@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+    <div class="submit-overlay hide">
+        <div class="submit-container">
+            <div class="submit-content">
+                Do you want to submit?
+            </div>
+            <div class="allow-submit" onclick="submitExam()">
+                Allow
+            </div>
+            <div class="cancel-submit" onclick="hideSubmit()">
+                Cancel
+            </div>
+        </div>
+    </div>
+    <div class="turn-back-overlay hide">
+        <div class="turn-back-container">
+            <div class="turn-back-content">
+                Do you want to turn back?
+            </div>
+            <div class="allow-turn-back" 
+                onclick="document.location.href = '../exam-home.html';"> Turn back </div>
+            <div class="cancel-turn-back" onclick="
+                document.querySelector('.turn-back-overlay')
+                    .classList.add('hide');
+            ">
+                Return to exam
+            </div>
+        </div>
+    </div>
+    <div class="time-run-out hide">
+        <div class="background"></div>
+        <div class="notificate">Time run out</div>
+    </div>
+
+    <div class="top-section">
+        <div class="turn-back-btn" onclick="
+        document.querySelector('.turn-back-overlay')
+        .classList.remove('hide');">
+            <img src="../../assets/images/turn-back.svg">
+        </div>
+
+        <div class="time score"></div>
+
+        <div class="submit-btn" onclick="showSubmit()">Submit</div>
+    </div>
+
+    <div class="exam">
+        <div class="exam-part underline-part">
+            <h1>I. Circle the letter A, B, C or D to indicate the word whose underlined part differs from the other three in pronunciation in each of the following questions. (0.5 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part stress-part">
+            <h1>II. Circle the letter A, B, C or D to indicate the word that differs from the other three in the position of primary stress in the following questions. (0.5 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part closet-part">
+            <h1>III. Circle the letter A, B, C or D to indicate the word CLOSET in meaning to the underlined word in the following questions. (0.25 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part opposite-part">
+            <h1>IV. Circle the letter A, B, C or D to indicate the word OPPOSITE in meaning to the underlined word in the
+                following questions. (0.25 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part best-answer-part">
+            <h1>V. Circle the letter A, B, C or D to indicate the answer that best fits each gap in the following question. (2.25
+                points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part need-correcting-part">
+            <h1>VI. Circle the letter A, B, C or D to indicate the underlined part that needs correcting in each of the following
+                questions. (0.75 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part correct-form-part">
+            <h1>VII. Put each word in capital letters into the correct form so that It can fit the gap in each sentence below. (1.25 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part response-part">
+            <h1>VIII. Circle the letter A, B, C or D on your answer sheet to indicate the most suitable response to complete each
+                of the following exchanges. (0.5 points)</h1>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part reading1-part">
+            <h1>IX. Read the following passage and circle the letter A, B, C or D to indicate te correct word that best fits each
+                of the numbered blanks from 26-30. (1.25 points)</h1>
+            <div class="heading-question1"></div>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part reading2-part">
+            <h1>X. Read the following passage and circle the letter A, B, C or D to indicate te correct answer to each ò the
+                quétions from 31-35. (1.25 points)</h1>
+            <div class="heading-question2"></div>
+            <div class="mc-questions"></div>
+        </div>
+
+        <div class="exam-part rewrite-part">
+            <h1>XI. Rewrite each of the sentences below in such a way that it means exactly the same as the one given before
+                it. (1.25 point)</h1>
+            <div class="mc-questions"></div>
+        </div>
+    </div>
+
+    <script type="module" src="exam.js"></script>
+</body>
+</html>
