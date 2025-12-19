@@ -657,7 +657,8 @@ function submitExam() {
             Score ${point} / 10
         `;
 
-        mcQuestionGroup.querySelectorAll('.explain').forEach(explain => {
+        // --- FIX: .explain là sibling của .mc-question, nên chọn bằng selector toàn cục theo chỉ số câu ---
+        document.querySelectorAll(`.explain.q${idx}`).forEach(explain => {
             explain.classList.remove('hide');
         });
     });
@@ -695,6 +696,7 @@ function submitExam() {
         behavior: 'smooth'
     });
 }
+
 
 function addCorrect(question, answer) {
     var correctAnswer = document.querySelector(`.mc-choice-id.q${question}.${answer}`);
