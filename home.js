@@ -29,7 +29,7 @@ var lessons = [
     },
     {
         name: "Cách đánh trọng âm",
-        url: "https://nativex.edu.vn/tu-hoc/tong-hop-quy-tac-danh-trong-am-bat-bai-trong-tieng-anh/l",
+        url: "https://langmaster.edu.vn/quy-tac-danh-dau-trong-am-co-ban-a72i995.html",
         img: "eye.svg",
     },
     {
